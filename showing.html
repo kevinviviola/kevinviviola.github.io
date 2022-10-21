@@ -44,9 +44,9 @@
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="51">
-    <audio autoplay loop>
-        <source src="img/1.mp3" type="audio/mpeg">
-        <source src="img/1.ogg" type="audio/ogg">
+    <audio id="kntl" autoplay loop>
+        <source src="https://kevinviviola.github.io/img/1.mp3" type="audio/mpeg">
+        <source src="https://kevinviviola.github.io/img/1.ogg" type="audio/ogg">
         <source src="https://kevinviviola.github.io/img/1.mp3" type="audio/mpeg">
     </audio>
     <!-- Navbar Start -->
@@ -395,6 +395,11 @@
         function showDiv(){
             document.getElementById('wed').style.display = "block";
         }
+    </script>
+    <script>
+        $('#kntl').on('ended', function() {
+            manageImageObjectsLevel();
+        }).get(0).play();
     </script>
 
     <!-- Template Javascript -->
